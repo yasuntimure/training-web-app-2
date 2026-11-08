@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Training 2 · Simple Strength & Mobility</title>
+  <meta name="description" content="A simple seven-day kettlebell and barbell program. Low-volume strength, daily mobility, steady cardio, and recovery.">
+  <meta name="theme-color" content="#0D1211">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Training 2">
+  <link rel="apple-touch-icon" href="./app-icon.png">
+  <link rel="icon" type="image/png" href="./app-icon.png">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./program.js" defer></script>
+  <script src="./core.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand"><h1>Training 2</h1><div class="meta" id="datelbl"></div></div>
+    <nav class="pills" id="pills" aria-label="Training days"></nav>
+  </header>
+  <main>
+    <div class="dayhead"><h2 id="daytitle"></h2><div class="sub" id="daysub"></div></div>
+    <div class="bar" id="progressbar" role="progressbar" aria-label="Session completion" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i id="prog"></i></div>
+    <div class="progress-label" id="progresslabel"></div>
+    <div id="content"></div>
+  </main>
+  <div class="tools">
+    <button class="btn" id="resetday">Clear day's ticks</button>
+    <button class="btn" id="wake">Keep screen on</button>
+    <button class="btn" id="export">Back up log</button>
+    <button class="btn" id="import">Restore log</button>
+    <input id="importfile" type="file" accept="application/json,.json" hidden>
+  </div>
+  <div class="saved" id="saved" role="status" aria-live="polite"></div>
+</div>
+<aside class="timer" id="timer" aria-label="Rest timer" data-on="0">
+  <div class="t" id="tval" role="timer">0:00</div>
+  <div class="lbl" id="tlbl">Rest</div>
+  <button data-adj="-15" aria-label="Subtract 15 seconds">−15</button>
+  <button data-adj="15" aria-label="Add 15 seconds">+15</button>
+  <button id="tstop">Done</button>
+</aside>
+<noscript><p class="intro">Enable JavaScript to view the program and track your sessions.</p></noscript>
+</body>
+</html>
